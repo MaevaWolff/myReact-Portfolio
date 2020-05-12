@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark);
+  color: var(--font-color);
+  font-family: "Poppins";
+  font-size: 14px;
+  transition: all 0.3s ease;
+
+  @include md {
+    font-size: 16px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.me {
+  position: absolute;
+  top: 130px;
+  right: 10px;
+  width: 200px;
+  opacity: 0;
+  transition: all 2s;
+}
+
+.opacity {
+  opacity: 1;
+  right: 300px;
+  animation: moveMe 5s infinite;
+}
+
+::-moz-selection {
+  background: var(--green);
+  color: white;
+}
