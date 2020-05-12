@@ -23,7 +23,7 @@
 
   &__typing {
     color: var(--green);
-    opacity: 0;
+    opacity: 1;
     transition: all 1s;
     margin-top: -60px;
     @include sm {

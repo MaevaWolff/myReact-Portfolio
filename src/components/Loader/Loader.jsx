@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+
 import "./Loader.scss";
+import Typical from "react-typical";
 
 class Loader extends Component {
   render() {
     return (
-      <div class="loader visible">
+      <div className="loader visible">
         <svg
           width="894"
           height="250"
@@ -66,7 +68,12 @@ class Loader extends Component {
              c-2.45-2.4-6.18-3.6-11.17-3.6h-15.9V187.84z"
           />
         </svg>
-        <div class="loader__typing"></div>
+
+        <Typical
+          steps={["Maëva WOLFF - Portfolio 2020", 2000]}
+          wrapper="p"
+          className="loader__typing"
+        />
       </div>
     );
   }
