@@ -3,15 +3,12 @@ import "./Loader.scss";
 
 import Typical from "react-typical";
 
-// components
-import Main from "../Main/Main";
-
 function Loader() {
   const [loader, isInvisible] = useState(false);
 
-  const loading = () => {
+  setTimeout(() => {
     isInvisible(!loader);
-  };
+  }, 3000);
 
   return (
     <div>
@@ -77,7 +74,7 @@ function Loader() {
                c-2.45-2.4-6.18-3.6-11.17-3.6h-15.9V187.84z"
           />
         </svg>
-        <button onClick={loading}> djlkjl</button>
+        {/* <button onClick={loading}> djlkjl</button> */}
 
         <Typical
           steps={["Maëva WOLFF - Portfolio 2020", 2000]}
@@ -85,7 +82,6 @@ function Loader() {
           className="loader__typing"
         />
       </div>
-      <Main></Main>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 
 import "./Main.scss";
 
@@ -9,15 +9,19 @@ import Header from "../Header/Header";
 import Hero from "../Hero/Hero";
 // import Loader from "../Loader/Loader";
 
-class Main extends Component {
-  render() {
-    return (
-      <main id="home">
-        <Header></Header>
-        <Hero></Hero>
-      </main>
-    );
-  }
+function Main() {
+  const [main, isVisible] = useState(false);
+
+  setTimeout(() => {
+    isVisible(!main);
+  }, 3000);
+
+  return (
+    <main id="home" className={`${main ? "visible " : ""}`}>
+      <Header></Header>
+      <Hero></Hero>
+    </main>
+  );
 }
 
 export default Main;
